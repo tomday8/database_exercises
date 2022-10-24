@@ -24,8 +24,24 @@ class Application
 
   def run
     @io.puts "Welcome to the music library manager!"
-    a = prompt('Test')
-    p a
+    
+
+    @io.puts "What would you like to do?
+            1 - List all albums
+            2 - List all artists"
+
+    choice = prompt('Enter your choice:')
+    # p input
+    if choice == 1
+        @io.puts AlbumRepository.all
+    elsif choice == 2
+        @io.puts ArtistRepository.all
+    end
+    # a = prompt('Test')
+    # p a
+
+
+
     # What would you like to do?
     #     1 - List all albums
     #     2 - List all artists
